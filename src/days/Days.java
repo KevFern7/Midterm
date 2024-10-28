@@ -16,20 +16,19 @@ import java.util.Scanner;
  *
  * @author sivagamasrinivasan
  jn 22nd
+ * This class prints the names of all the days
+ * by using the Weekday enum.
+ *
+ * @author sivagamasrinivasan
  */
 public class Days {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-         
-    Scanner in =new Scanner(System.in);
-    System.out.println("Enter the day number (one,two,three,four,five) in string");
-    String code = in.next();
-    Weekdays t= new Weekdays();
-    t.nameOfDay(code); 
-    }// TODO code application logic here
-    
-    
+        System.out.println("All days of the week:");
+
+        // Loop through each day in the Weekday enum and print it
+        for (Weekdays day : Weekdays.values()) {
+            System.out.println(day);
+        }
+    }
 }
